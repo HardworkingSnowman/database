@@ -1,0 +1,60 @@
+虛擬機設定:
+sudo apt update
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+sudo apt update
+sudo apt install docker-ce
+docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:5.7
+
+建立資料庫:
+CREATE DATABASE hw1;
+
+建立表格:
+CREATE TABLE `match`(
+`matchId` char(100), 
+`matchDuration` int,
+`matchType` char(100),
+`maxPlace` int,
+`numGroup` int);
+
+CREATE TABLE `player_statistic`(
+`Id` char(100),
+`groupId` char(100),
+`matchId` char(100),
+`assists` int,
+`boosts` int,
+`damageDealt` double,
+`DBNOs` int,
+`headshotKills` int,
+`heals` int,
+`killPlace` int,
+`killPoints` int,
+`kills` int,
+`killStreaks` int,
+`longestKill` double,
+`randPoints` int,
+`revives` int,
+`rideDistance` double,
+`roadKills` int,
+`swimDistance` double,
+`teamKills` int,
+`vehicleDestroys` int,
+`walkDistance` double,
+`weaponsAcquired` int,
+`winPoints` int,
+`winPlacePerc` double);
+
+匯入資料庫:
+LOAD DATA LOCAL INFILE '/data/match.csv'
+INTO TABLE `match`
+CHARACTER SET UTF8
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+
+建立 index:
+CREATE INDEX matchId ON `match` (`matchId`);
+CREATE INDEX matchId ON `player_statistic` (`matchId`);
+
+
