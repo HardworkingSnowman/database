@@ -105,7 +105,7 @@ IGNORE 1 ROWS;
 ```
 CREATE INDEX matchId ON `match` (`matchId`);
 CREATE INDEX matchId ON `player_statistic` (`matchId`);
-CREATE INDEX matchId ON `player_statistic` (`Id`);
+CREATE INDEX Id ON `player_statistic` (`Id`);
 ```
 
 5. 第一提到第八題
