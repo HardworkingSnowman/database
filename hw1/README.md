@@ -102,9 +102,11 @@ IGNORE 1 ROWS;
 ```
 
 4. 建立 INDEX 加速查詢:
+```
 CREATE INDEX matchId ON `match` (`matchId`);
 CREATE INDEX matchId ON `player_statistic` (`matchId`);
 CREATE INDEX matchId ON `player_statistic` (`Id`);
+```
 
 5. 第一提到第八題
 * [第一題](q1.sql)
