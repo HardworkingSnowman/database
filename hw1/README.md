@@ -13,7 +13,7 @@
 ```
 sudo apt update
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
 sudo apt update
 sudo apt install docker-ce
@@ -26,9 +26,9 @@ sudo apt install docker-ce
 * 如果遇到 Permission denied: 到 ssh 後的 Terminal，chmod 777 /home/[ubuntu user name]，之後再執行步驟 1, 2。
 
 ## 安裝 MYSQL
-1. docker run --name [MYSQL_user_name] -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:5.7
-2. docker run [MYSQL_user_name]
-3. docker run -it --link [MYSQL_user_name] -v `pwd`:/data --rm mysql:5.7 sh -c 'exec mysql -h"$MYSQL_PORT_3306_TCP_ADDR" -P"$MYSQL_PORT_3306_TCP_PORT" -uroot -p"$MYSQL_ENV_MYSQL_ROOT_PASSWORD"'
+1. sudo docker run --name [MYSQL_user_name] -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:5.7
+2. sudo docker run [MYSQL_user_name]
+3. sudo docker run -it --link [MYSQL_user_name] -v `pwd`:/data --rm mysql:5.7 sh -c 'exec mysql -h"$MYSQL_PORT_3306_TCP_ADDR" -P"$MYSQL_PORT_3306_TCP_PORT" -uroot -p"$MYSQL_ENV_MYSQL_ROOT_PASSWORD"'
 * 前三個步驟完成，應該會看到 mysql>
 * [MYSQL_user_name] 是你自己取的名字
 * 之後要啟動 docker，只要步驟 2, 3就可以了
@@ -38,8 +38,8 @@ sudo apt install docker-ce
 在 ssh 過去的地方:
 ```
 cd /home/[ubuntu user name]
-docker run [MYSQL_user_name]
-docker run -it --link [MYSQL_user_name] -v `pwd`:/data --rm mysql:5.7 sh -c 'exec mysql -h"$MYSQL_PORT_3306_TCP_ADDR"
+sudo docker run [MYSQL_user_name]
+sudo docker run -it --link [MYSQL_user_name] -v `pwd`:/data --rm mysql:5.7 sh -c 'exec mysql -h"$MYSQL_PORT_3306_TCP_ADDR"
 ```
 
 1. 建立資料庫
