@@ -8,4 +8,4 @@ FROM
   GROUP BY player_statistic.groupId
   ) teamInfo
 GROUP BY teamRoadKills
-ORDER BY avgWinPlacePerc DESC; 
+ORDER BY teamRoadKills DESC; 
