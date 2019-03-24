@@ -27,7 +27,7 @@ sudo apt install docker-ce
 
 ## 安裝 MYSQL
 1. sudo docker run --name [MYSQL_user_name] -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:5.7
-2. sudo docker run [MYSQL_user_name]
+2. sudo docker start [MYSQL_user_name]
 3. sudo docker run -it --link [MYSQL_user_name] -v `pwd`:/data --rm mysql:5.7 sh -c 'exec mysql -h"$MYSQL_PORT_3306_TCP_ADDR" -P"$MYSQL_PORT_3306_TCP_PORT" -uroot -p"$MYSQL_ENV_MYSQL_ROOT_PASSWORD"'
 * 前三個步驟完成，應該會看到 mysql>
 * [MYSQL_user_name] 是你自己取的名字
