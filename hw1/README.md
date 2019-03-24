@@ -20,7 +20,7 @@ sudo apt install docker-ce
 ```
 
 ## 把作業提供的 mathc.csv, player_statistic.csv 傳上去
-1. 到本機，打開cmd Or Terminal => cd 到你存放 match.csv 和 player_statistic.csv 的地方 => scp match.csv player_statistic.csv [ubuntu user name]@127.0.0.1/home/[ubuntu user name] -P 22
+1. 到本機，打開cmd Or Terminal => cd 到你存放 match.csv 和 player_statistic.csv 的地方 => scp -P 22 match.csv player_statistic.csv [ubuntu user name]@127.0.0.1/home/[ubuntu user name]
 2. 再 ssh 到虛擬機 => cd /home/[ubuntu user name] => ls => 應該會看到 match.csv, player_statistic
 
 * 如果遇到 Permission denied: 到 ssh 後的 Terminal，chmod 777 /home/[ubuntu user name]，之後再執行步驟 1, 2。
