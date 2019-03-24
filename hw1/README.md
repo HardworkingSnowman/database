@@ -40,7 +40,7 @@ sudo docker run -it --link [MYSQL_user_name] -v `pwd`:/data --rm mysql:5.7 sh -c
 在 ssh 過去的地方:
 ```
 cd /home/[ubuntu user name]
-sudo docker run [MYSQL_user_name]
+sudo docker start [MYSQL_user_name]
 sudo docker run -it --link [MYSQL_user_name] -v `pwd`:/data --rm mysql:5.7 sh -c 'exec mysql -h"$MYSQL_PORT_3306_TCP_ADDR"
 ```
 
