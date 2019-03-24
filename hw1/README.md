@@ -110,7 +110,7 @@ CREATE INDEX matchId ON `player_statistic` (`matchId`);
 CREATE INDEX Id ON `player_statistic` (`Id`);
 ```
 
-5. 第一提到第八題
+5. 第一題到第八題
 * [第一題](q1.sql)
 * [第二題](q2.sql)
 * [第三題](q3.sql)
