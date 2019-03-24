@@ -1,6 +1,6 @@
 # [HW1](HW1.pdf) 新手教學
 ## 作業要求使用 Ubuntu server
-1. [VirtualBox](https://www.virtualbox.org/wiki/Downloads) 下載虛擬機
+1. [VirtualBox](https://123.briian.com/forum.php?mod=viewthread&tid=553) 下載虛擬機
 2. [Ubuntu server](https://www.ubuntu.com/download/server) 下載Ubuntu iso檔
 3. 打開虛擬機 => 新增 => linux, ubuntu 64 => 看自己要用多少空間 => 匯入影像檔選擇剛剛下載的 ubuntu iso => 啟動 => 接著瘋狂下一步
 
