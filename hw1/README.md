@@ -41,7 +41,7 @@ sudo docker run -it --link [MYSQL_user_name] -v `pwd`:/data --rm mysql:5.7 sh -c
 ```
 cd /home/[ubuntu user name]
 sudo docker start [MYSQL_user_name]
-sudo docker run -it --link [MYSQL_user_name] -v `pwd`:/data --rm mysql:5.7 sh -c 'exec mysql -h"$MYSQL_PORT_3306_TCP_ADDR"'
+sudo docker run -it --link [MYSQL_user_name] -v `pwd`:/data --rm mysql:5.7 sh -c 'exec mysql -h"$MYSQL_PORT_3306_TCP_ADDR" -P"$MYSQL_PORT_3306_TCP_PORT" -uroot -p"$MYSQL_ENV_MYSQL_ROOT_PASSWORD"'
 ```
 
 1. 建立資料庫
